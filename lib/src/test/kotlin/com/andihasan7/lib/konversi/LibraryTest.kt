@@ -8,7 +8,22 @@ import kotlin.test.assertTrue
 
 class LibraryTest {
     @Test fun someLibraryMethodReturnsTrue() {
-        val classUnderTest = Library()
-        assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'")
+        val classUnderTest = Konversi().toTimeFull(10.99999722)
+        assertTrue(classUnderTest == "10 : 59 : 59", "metode library harus bernilai 'true'")
+        
+        val dr = 10
+        val mnt = 59
+        val dtk = 10.99
+        
+        val n = 10.98638611
+        
+        println("toDecimal = ${Konversi().toDecimal(dr, mnt, dtk)}")
+        println("toTime = ${Konversi().toTime(n)}")
+        println("toTimeFull = ${Konversi().toTimeFull(n)}")
+        println("toTimeFullRound = ${Konversi().toTimeFullRound(n)}")
+        println("toTimeFullRound2 = ${Konversi().toTimeFullRound2(n)}")
+        println("toDegreeFull = ${Konversi().toDegreeFull(n)}")
+        println("toDegreeFullRound = ${Konversi().toDegreeFullRound(n)}")
+        println("toDegreeFullRound2 = ${Konversi().toDegreeFullRound2(n)}")
     }
 }
