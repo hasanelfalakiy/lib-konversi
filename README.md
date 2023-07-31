@@ -19,7 +19,47 @@
 
 ## Tentang Library Konversi
 
-Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (Double) ke derajat menit detik (DMS) / jam memit detik (HMS)
+Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (Double) ke derajat menit detik (DMS) / jam memit detik (HMS), untuk keperluan komputasi terutama perhitungan Astronomi/ Falak.
+
+## Fitur
+
+-[x] mengubah format DMS ke Double
+-[x] mengubah format Double ke DMS, ada beberapa varian 
+-[x] mengubah format Double ke HMS, ada beberapa varian
+-[x] Extention function Double.round(), untuk mengcustom pembulatan dibelakang koma
+
+## Konfigurasi pertama
+
+1. masukkan kode ini ke settings.gradle.kts (root kotlin dsl) di blok ```repositories```
+```kotlin.kts
+  dependencyResolutionManagement {
+    repositories {
+      // contoh
+      maven {
+        url = uri("https://jitpack.io")
+      }
+    }
+  }
+```
+jika menggunakan groovy dsl
+```groovy
+  repositories {
+    ...
+    maven { url 'https://jitpack.io' }
+  }
+```
+2. masukkan dependensi ke build.gradle.kts (app/build.gradle.kts kotlin dsl)
+di blok ```dependencies``` 
+
+```kotlin.kts
+implementation("com.github.andihasan97:lib-konversi:$version_release")
+```
+jika menggunakan groovy dsl
+```groovy
+implementation 'com.github.andihasan97:lib-konversi:$version_release'
+```
+## Cara menggunakan
+
 
 
 ## License
