@@ -19,14 +19,14 @@
 
 ## Tentang Library Konversi
 
-Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (Double) ke derajat menit detik (DMS) / jam memit detik (HMS), untuk keperluan komputasi terutama perhitungan Astronomi/ Falak.
+Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (Double) ke derajat menit detik (DMS) /jam memit detik (HMS), untuk keperluan komputasi terutama perhitungan Astronomi/Falak.
 
 ## Fitur
 
--[x] mengubah format DMS ke Double
--[x] mengubah format Double ke DMS, ada beberapa varian 
--[x] mengubah format Double ke HMS, ada beberapa varian
--[x] Extention function Double.round(), untuk mengcustom pembulatan dibelakang koma
+- [x] mengubah format DMS/HMS ke Double
+- [x] mengubah format Double ke DMS, ada beberapa varian 
+- [x] mengubah format Double ke HMS, ada beberapa varian
+- [x] Extention function Double.round(), untuk mengcustom pembulatan dibelakang koma
 
 ## Konfigurasi pertama
 
