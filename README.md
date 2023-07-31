@@ -19,7 +19,7 @@
 
 ## Tentang Library Konversi
 
-Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (Double) ke derajat menit detik (DMS) /jam memit detik (HMS), untuk keperluan komputasi terutama perhitungan Astronomi/Falak.
+Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (Double) ke derajat menit detik (DMS) /jam menit detik (HMS), untuk keperluan komputasi terutama perhitungan Astronomi/Falak.
 
 ## Fitur
 
