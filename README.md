@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./img/ic_bannerr.png" alt="app_banner"/>
+  <img src="./img/ic_bannerr.png" width=607 height=335 alt="app_banner"/>
 </p>
 
 <h2 align="center"><b>Konversi</b></h2>
