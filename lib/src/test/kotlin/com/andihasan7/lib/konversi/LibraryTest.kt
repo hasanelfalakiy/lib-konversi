@@ -5,6 +5,7 @@ package com.andihasan7.lib.konversi
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
+import com.andihasan7.lib.konversi.round
 
 class LibraryTest {
     @Test fun someLibraryMethodReturnsTrue() {
@@ -14,6 +15,7 @@ class LibraryTest {
         val dr = 10
         val mnt = 59
         val dtk = 10.99
+        val v = 17.97876587007
         
         val n = 10.98638611
         
@@ -25,5 +27,6 @@ class LibraryTest {
         println("toDegreeFull = ${Konversi().toDegreeFull(n)}")
         println("toDegreeFullRound = ${Konversi().toDegreeFullRound(n)}")
         println("toDegreeFullRound2 = ${Konversi().toDegreeFullRound2(n)}")
+        println("round $v = ${v.round(3)}")
     }
 }
