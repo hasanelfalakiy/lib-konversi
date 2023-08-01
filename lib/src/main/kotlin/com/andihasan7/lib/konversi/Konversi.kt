@@ -108,7 +108,7 @@ class Konversi {
             degree = "-$degree"
         }
 
-    	return "$degree° $minute` $second``"
+    	return "$degree\u00B0 $minute\u2032 $second\u2033"
 	}
     
     
@@ -138,7 +138,7 @@ class Konversi {
             degree = "-$degree"
         }
 
-    	return "$degree° $minute` $second``"
+    	return "$degree\u00B0 $minute\u2032 $second\u2033"
 	}
 	
     
@@ -157,7 +157,7 @@ class Konversi {
             degree = "-$degree"
         }
 
-    	return "$degree° $minute` $second``"
+    	return "$degree\u00B0 $minute\u2032 $second\u2033"
 	}
     
     /*
