@@ -26,7 +26,7 @@ Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (
 - [x] mengubah format DMS/HMS ke Double
 - [x] mengubah format Double ke DMS, ada beberapa varian 
 - [x] mengubah format Double ke HMS, ada beberapa varian
-- [x] Extention function Double.round(), untuk mengcustom pembulatan dibelakang koma
+- [x] Extension function Double.round(), untuk mengcustom pembulatan dibelakang koma
 
 ## Konfigurasi pertama
 
@@ -58,11 +58,50 @@ jika menggunakan groovy dsl
 ```groovy
 implementation 'com.github.andihasan97:lib-konversi:$version_release'
 ```
-## Cara menggunakan
+## Daftar fungsi
 
 ```kotlin.kt
 
+/* 
+  fungsi mengubah DMS ke Double, jika bernilai negatif,
+  wajib memasukkan tanda negatif (-) disetiap input DMS.
+  parameter second bisa menerima integer/double
+*/
+fun toDecimal(degree: Int, minute: Int, second: Number): Double
+
+// HH : MM detik dibulatkan ke menit, menit ke jam jika menit == 60
+fun toTime(decimal: Double): String
+
+// HH : MM : SS angka dibelakang koma orde detik tidak dibulatkan ke detik integer
+fun toTimeFull(decimal: Double): String
+
+// HH : MM : SS angka dibulatkan ke detik
+fun toTimeFullRound(decimal: Double): String
+
+// HH : MM : SS,ss dibulatkan ke 2 angka di belakang koma 
+fun toTimeFullRound2(decimal: Double): String
+
+// DD° MM' SS" angka dibelakang koma orde detik tidak dibulatkan ke detik integer
+fun toDegreeFull(decimal: Double): String
+
+// DD° MM' SS" angka dibulatkan ke detik
+fun toDegreeFullRound(decimal: Double): String
+
+// DD° MM' SS,ss" dibulatkan ke 2 angka di belakang koma
+fun toDegreeFullRound2(decimal: Double): String
+
+// Extension Function Round, custom round membulatkan angka di belakang koma
+fun Double.round( decimals : Int ) : Double
+
 ```
+
+## Ingin berkontribusi?
+
+> Jika Anda ingin berkontribusi, silahkan menggarpu (Fork) repositori ini, buat perubahan, kirim Pull request ke repositori ini
+
+## Kontak Kami
+
+- [Telegram](https://t.me/moonelfalakiy)
 
 ## License
 
