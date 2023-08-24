@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/lib-konversi/README.md",
       "selection": {
         "end": {
-          "column": 0,
+          "column": 9,
           "index": -1,
-          "line": 0
+          "line": 72
         },
         "start": {
-          "column": 0,
+          "column": 9,
           "index": -1,
-          "line": 0
+          "line": 72
         }
       }
     },
@@ -61,5 +61,5 @@
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-konversi/lib/src/test/kotlin/com/andihasan7/lib/konversi/LibraryTest.kt"
+  "selectedFile": "/storage/emulated/0/lib-konversi/README.md"
 }

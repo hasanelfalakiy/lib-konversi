@@ -69,6 +69,9 @@ implementation 'com.github.andihasan97:lib-konversi:$version_release'
 */
 fun toDecimal(degree: Int, minute: Int, second: Number): Double
 
+// jika true maka positif, jika false maka negatif
+fun toDecimalCheck(degree: Int, minute: Int, second: Number, check: Boolean): Double
+
 // HH : MM detik dibulatkan ke menit, menit ke jam jika menit == 60
 fun toTime(decimal: Double): String
 
@@ -122,4 +125,4 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with Library Konversi.  If not, see <https://www.gnu.org/licenses/>.
 ```
-Laporkan kepada kami jika ada yang melanggar ketentuan Lisensi, baik dengan membuat issues atau menulis surat langsung kepada kami.
+Report to us if anyone violates the terms of the License, either by creating issues or writing to us directly.
