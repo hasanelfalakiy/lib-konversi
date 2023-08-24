@@ -21,7 +21,18 @@ class Konversi {
     	return decimal
 	}
     
+    // jika true maka positif, jika false maka negatif
+    fun toDecimalCheck(degree: Int, minute: Int, second: Number, check: Boolean): Double {
+	    var decimal = degree + ((minute).toDouble() / 60) + ((second).toDouble() / 3600)
     
+        if (check == true) {
+    	    decimal
+        } else {
+    	    decimal = 0 - decimal
+        }
+    
+        return decimal
+    }
 
     // HH : MM detik dibulatkan ke menit, menit ke jam jika menit == 60
     fun toTime(decimal: Double): String {

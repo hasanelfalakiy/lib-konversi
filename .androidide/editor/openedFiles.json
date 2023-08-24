@@ -19,14 +19,14 @@
       "file": "/storage/emulated/0/lib-konversi/lib/src/test/kotlin/com/andihasan7/lib/konversi/LibraryTest.kt",
       "selection": {
         "end": {
-          "column": 40,
+          "column": 25,
           "index": -1,
-          "line": 7
+          "line": 25
         },
         "start": {
-          "column": 40,
+          "column": 25,
           "index": -1,
-          "line": 7
+          "line": 25
         }
       }
     },
@@ -42,6 +42,21 @@
           "column": 8,
           "index": -1,
           "line": 0
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt",
+      "selection": {
+        "end": {
+          "column": 22,
+          "index": -1,
+          "line": 33
+        },
+        "start": {
+          "column": 22,
+          "index": -1,
+          "line": 33
         }
       }
     }

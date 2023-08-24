@@ -5,6 +5,7 @@ package com.andihasan7.lib.konversi
 
 import kotlin.test.Test
 import kotlin.test.assertTrue
+import com.andihasan7.lib.konversi.Konversi
 import com.andihasan7.lib.konversi.round
 
 class LibraryTest {
@@ -19,6 +20,12 @@ class LibraryTest {
         
         val n = 10.98638611
         
+        val degree = 7
+        val minute = 26
+        val second = 0
+        val check = false
+        
+        println("toDecimalCheck = ${Konversi().toDecimalCheck(degree, minute, second, check)}")
         println("toDecimal = ${Konversi().toDecimal(dr, mnt, dtk)}")
         println("toTime = ${Konversi().toTime(n)}")
         println("toTimeFull = ${Konversi().toTimeFull(n)}")
