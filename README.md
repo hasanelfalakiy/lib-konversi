@@ -69,6 +69,7 @@ implementation 'com.github.andihasan97:lib-konversi:$version_release'
 */
 fun toDecimal(degree: Int, minute: Int, second: Number): Double
 
+// tipe Number berarti menerima tipe Integer/Double
 // jika true maka positif, jika false maka negatif
 fun toDecimalCheck(degree: Int, minute: Int, second: Number, check: Boolean): Double
 
