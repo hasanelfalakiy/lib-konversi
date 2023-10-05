@@ -50,8 +50,32 @@ class Konversi {
         time = time.padStart(2, '0')
         minute = minute.padStart(2, '0')
 
-    	return "$time : $minute"
+    	return "$time:$minute"
 	}
+    
+    
+    // positif/negatif : sama-sama dibulatkan keatas/menjauhi nol
+    fun toTimeWithMinus(decimal: Double): String {
+	    var tandaMinus = false
+    
+        var time = (abs(decimal)).toInt().toString()
+        var minute = (round((abs(decimal) - time.toDouble()) * 60)).toInt().toString()
+        
+	    if (decimal < 0) {
+    	    tandaMinus = true
+        }
+    
+        // Tambahkan nol sebelum angka yang kurang dari 10
+        time = time.padStart(2, '0')
+        minute = minute.padStart(2, '0')
+    
+        if (tandaMinus) {
+    	    time = "-$time"
+        }
+
+        return "$time:$minute"
+    }
+
     
     
     // HH : MM : SS angka dibelakang koma orde detik tidak dibulatkan ke detik integer
@@ -64,7 +88,7 @@ class Konversi {
         minute = minute.padStart(2, '0')
         second = second.padStart(2, '0')
 
-    	return "$time : $minute : $second"
+    	return "$time:$minute:$second"
 	}
     
     // HH : MM : SS angka dibulatkan ke detik
@@ -88,7 +112,7 @@ class Konversi {
         minute = minute.padStart(2, '0')
         second = second.padStart(2, '0')
 
-    	return "$time : $minute : $second"
+    	return "$time:$minute:$second"
 	}
     
     // HH : MM : SS,ss dibulatkan ke 2 angka di belakang koma 
@@ -101,8 +125,27 @@ class Konversi {
         minute = minute.padStart(2, '0')
         second = second.padStart(2, '0')
 
-    	return "$time : $minute : $second"
+    	return "$time:$minute:$second"
 	}
+    
+    // HH:MM:SS,ss dibulatkan ke 2 angka di belakang koma, dengan tanda minus
+    fun toTimeFullRound2WithMinus(decimal: Double): String {
+        var degree = abs(decimal).toInt().toString()
+        var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
+        var second =
+            ((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
+
+        // Tambahkan nol sebelum angka yang kurang dari 10
+        degree = degree.padStart(2, '0')
+        minute = minute.padStart(2, '0')
+        second = second.padStart(2, '0')
+
+        if (decimal < 0) {
+            degree = "-$degree"
+        }
+
+        return "$degree:$minute:$second"
+    }
     
     // DD° MM` SS``angka dibelakang koma orde detik tidak dibulatkan ke detik integer
     fun toDegreeFull(decimal: Double): String {
