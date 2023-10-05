@@ -76,6 +76,9 @@ fun toDecimalCheck(degree: Int, minute: Int, second: Number, check: Boolean): Do
 // HH : MM detik dibulatkan ke menit, menit ke jam jika menit == 60
 fun toTime(decimal: Double): String
 
+// positif/negatif : sama-sama dibulatkan keatas/menjauhi nol
+fun toTimeWithMinus(decimal: Double): String
+
 // HH : MM : SS angka dibelakang koma orde detik tidak dibulatkan ke detik integer
 fun toTimeFull(decimal: Double): String
 
@@ -93,6 +96,9 @@ fun toDegreeFullRound(decimal: Double): String
 
 // DD° MM' SS,ss" dibulatkan ke 2 angka di belakang koma
 fun toDegreeFullRound2(decimal: Double): String
+
+// HH:MM:SS,ss dibulatkan ke 2 angka di belakang koma, dengan tanda minus
+fun toTimeFullRound2WithMinus(decimal: Double): String
 
 // Extension Function Round, custom round membulatkan angka di belakang koma
 fun Double.round( decimals : Int ) : Double
