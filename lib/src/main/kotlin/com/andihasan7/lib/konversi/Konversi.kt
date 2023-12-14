@@ -115,7 +115,7 @@ class Konversi {
     	return "$time:$minute:$second"
 	}
     
-    // HH : MM : SS,ss dibulatkan ke 2 angka di belakang koma 
+    // HH:MM:SS,ss dibulatkan ke 2 angka di belakang koma 
     fun toTimeFullRound2(decimal: Double): String {
     	var time = decimal.toInt().toString()
     	var minute = ((decimal - time.toDouble()) * 60).toInt().toString()
@@ -145,6 +145,25 @@ class Konversi {
         }
 
         return "$degree:$minute:$second"
+    }
+    
+    // HH j MM m SS,ss d dibulatkan ke 2 angka di belakang koma
+    fun toCounterTimeRound2WithMinus(decimal: Double): String {
+        var degree = abs(decimal).toInt().toString()
+        var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
+        var second =
+            ((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
+
+        // Tambahkan nol sebelum angka yang kurang dari 10
+        degree = degree.padStart(2, '0')
+        minute = minute.padStart(2, '0')
+        second = second.padStart(4, '0')
+
+        if (decimal < 0) {
+            degree = "-$degree"
+        }
+
+        return "$degree j $minute m $second d"
     }
     
     // DD° MM` SS``angka dibelakang koma orde detik tidak dibulatkan ke detik integer
