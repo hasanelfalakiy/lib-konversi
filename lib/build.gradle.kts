@@ -17,7 +17,7 @@ plugins {
 }
 
 group = "com.github.andihasan97.lib-konversi"
-version = "3.0.0"
+version = "3.1.0"
 
 repositories {
     // Use Maven Central for resolving dependencies.
