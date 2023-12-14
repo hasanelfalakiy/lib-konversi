@@ -11,7 +11,7 @@ import com.andihasan7.lib.konversi.round
 class LibraryTest {
     @Test fun someLibraryMethodReturnsTrue() {
         val classUnderTest = Konversi().toTimeFull(10.99999722)
-        assertTrue(classUnderTest == "10 : 59 : 59", "metode library harus bernilai 'true'")
+        assertTrue(classUnderTest == "10:59:59", "metode library harus bernilai 'true'")
         
         val dr = 10
         val mnt = 59
@@ -31,6 +31,8 @@ class LibraryTest {
         println("toTimeFull = ${Konversi().toTimeFull(n)}")
         println("toTimeFullRound = ${Konversi().toTimeFullRound(n)}")
         println("toTimeFullRound2 = ${Konversi().toTimeFullRound2(n)}")
+        println("toTimeFullRound2WithMinus = ${Konversi().toTimeFullRound2WithMinus(n)}")
+        println("toCounterTimeRound2WithMinus = ${Konversi().toCounterTimeRound2WithMinus(n)}")
         println("toDegreeFull = ${Konversi().toDegreeFull(n)}")
         println("toDegreeFullRound = ${Konversi().toDegreeFullRound(n)}")
         println("toDegreeFullRound2 = ${Konversi().toDegreeFullRound2(n)}")
