@@ -52,11 +52,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.andihasan97:lib-konversi:$version_release")
+implementation("com.github.andihasan97:lib-konversi:3.1.0")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.andihasan97:lib-konversi:$version_release'
+implementation 'com.github.andihasan97:lib-konversi:3.1.0'
 ```
 ## Daftar fungsi
 
