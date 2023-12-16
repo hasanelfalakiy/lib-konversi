@@ -24,6 +24,7 @@ Library untuk mengkonversi format DMS ke Desimal (Double) &amp; format Desimal (
 ## Fitur
 
 - [x] mengubah format DMS/HMS ke Double
+- [x] mengubah format Double ke j m d
 - [x] mengubah format Double ke DMS, ada beberapa varian 
 - [x] mengubah format Double ke HMS, ada beberapa varian
 - [x] Extension function Double.round(), untuk mengcustom pembulatan dibelakang koma
