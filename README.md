@@ -59,6 +59,15 @@ jika menggunakan groovy dsl
 ```groovy
 implementation 'com.github.andihasan97:lib-konversi:3.1.0'
 ```
+
+## Tutorial Youtube
+
+Praktik implementasi library hisab irsyadul murid
+
+Part 1 [Membuat layout](https://youtu.be/UXJz_lqkXwk)
+Part 2 [Implementasi library](https://youtu.be/LefWCSdcV8s)
+Part 3 [Implementasi library](https://youtu.be/AxQ_ATx0imk)
+
 ## Daftar fungsi
 
 ```kotlin.kt
