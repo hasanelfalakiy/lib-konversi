@@ -64,9 +64,9 @@ implementation 'com.github.andihasan97:lib-konversi:3.1.0'
 
 Praktik implementasi library hisab irsyadul murid
 
-Part 1 [Membuat layout](https://youtu.be/UXJz_lqkXwk)
-Part 2 [Implementasi library](https://youtu.be/LefWCSdcV8s)
-Part 3 [Implementasi library](https://youtu.be/AxQ_ATx0imk)
+- Part 1 [Membuat layout](https://youtu.be/UXJz_lqkXwk)
+- Part 2 [Implementasi library](https://youtu.be/LefWCSdcV8s)
+- Part 3 [Implementasi library](https://youtu.be/AxQ_ATx0imk)
 
 ## Daftar fungsi
 
@@ -125,12 +125,13 @@ fun Double.round( decimals : Int ) : Double
 ## Kontak Kami
 
 - [Telegram](https://t.me/moonelfalakiy)
+- [Grup diskusi Telegram](https://t.me/moonlight_studio01/9)
 
 ## License
 
 ```
 Library Konversi
-Copyright (C) 2023  Andi Hasan Ashari
+Copyright (C) 2023-2024  Andi Hasan Ashari
 
 Library Konversi is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
