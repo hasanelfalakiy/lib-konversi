@@ -1,50 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/lib-konversi/README.md",
+      "file": "/storage/emulated/0/lib-konversi/lib/build.gradle.kts",
       "selection": {
         "end": {
-          "column": 23,
-          "index": 4379,
-          "line": 133
+          "column": 16,
+          "index": 661,
+          "line": 19
         },
         "start": {
-          "column": 23,
-          "index": 4379,
-          "line": 133
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/ExtensionRound.kt",
-      "selection": {
-        "end": {
-          "column": 3,
-          "index": 697,
-          "line": 16
-        },
-        "start": {
-          "column": 3,
-          "index": 697,
-          "line": 16
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt",
-      "selection": {
-        "end": {
-          "column": 31,
-          "index": 655,
-          "line": 17
-        },
-        "start": {
-          "column": 31,
-          "index": 655,
-          "line": 17
+          "column": 16,
+          "index": 661,
+          "line": 19
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt"
+  "selectedFile": "/storage/emulated/0/lib-konversi/lib/build.gradle.kts"
 }
