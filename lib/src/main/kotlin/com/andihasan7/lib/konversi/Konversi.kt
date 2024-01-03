@@ -29,9 +29,14 @@ import com.andihasan7.lib.konversi.round
 class Konversi {
     
     /* 
-    	fungsi mengubah DMS ke Double, jika bernilai negatif,
-    	wajib memasukkan tanda negatif (-) disetiap input DMS.
-        parameter second bisa menerima integer / double
+    * PERHATIAN !!!
+    *
+    * fungsi mengubah DMS ke Double (toDecimal), jika bernilai negatif,
+    * wajib memasukkan tanda negatif (-) disetiap input DMS.
+    * parameter second bisa menerima integer / double
+    *
+    * > semua fungsi toDegree mendukung nilai negatif
+    * > fungsi toTime hanya yang bernama WithMinus yang mendukung nilai negatif
     */
    
    
