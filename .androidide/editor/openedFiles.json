@@ -1,20 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/lib-konversi/lib/build.gradle.kts",
+      "file": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt",
       "selection": {
         "end": {
-          "column": 16,
-          "index": 661,
-          "line": 19
+          "column": 1,
+          "index": 3582,
+          "line": 109
         },
         "start": {
-          "column": 16,
-          "index": 661,
-          "line": 19
+          "column": 1,
+          "index": 3582,
+          "line": 109
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-konversi/lib/build.gradle.kts"
+  "selectedFile": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt"
 }

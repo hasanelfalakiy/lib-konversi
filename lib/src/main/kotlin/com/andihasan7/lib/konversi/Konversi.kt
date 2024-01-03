@@ -73,25 +73,36 @@ class Konversi {
 	}
     
     
-    // positif/negatif : sama-sama dibulatkan keatas/menjauhi nol
+    /*
+    * HH : MM detik dibulatkan ke menit, menit ke jam jika menit == 60,
+    * positif/negatif : sama-sama dibulatkan keatas/kebawah (menjauhi nol)
+    */
     fun toTimeWithMinus(decimal: Double): String {
 	    var tandaMinus = false
     
         var time = (abs(decimal)).toInt().toString()
-        var minute = (round((abs(decimal) - time.toDouble()) * 60)).toInt().toString()
-        
-	    if (decimal < 0) {
-    	    tandaMinus = true
+        var minute = ((abs(decimal) - time.toDouble()) * 60).toInt().toString()
+        var second =
+            round(((abs(decimal) - time.toDouble()) * 60 - minute.toDouble()) * 60).toInt().toString()
+
+        // Tambahkan perhitungan untuk membulatkan detik ke menit & menit ke jam jika menit == 60
+        if (second.toDouble() <= 60 && second.toDouble() >= 30) {
+            minute = (minute.toInt() + 1 - 60).toString()
+            time = (time.toInt() + 1).toString()
         }
     
+        if (decimal < 0) {
+            tandaMinus = true
+        }
+
         // Tambahkan nol sebelum angka yang kurang dari 10
         time = time.padStart(2, '0')
         minute = minute.padStart(2, '0')
     
         if (tandaMinus) {
-    	    time = "-$time"
+            time = "-$time"
         }
-
+    
         return "$time:$minute"
     }
 
