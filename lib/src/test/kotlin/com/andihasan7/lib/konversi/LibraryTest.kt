@@ -18,7 +18,7 @@ class LibraryTest {
         val dtk = 10.99
         val v = 17.97876587007
         
-        val n = 10.98638611
+        val n = -3.996666666667
         
         val degree = 7
         val minute = 26
@@ -28,6 +28,7 @@ class LibraryTest {
         println("toDecimalCheck = ${Konversi().toDecimalCheck(degree, minute, second, check)}")
         println("toDecimal = ${Konversi().toDecimal(dr, mnt, dtk)}")
         println("toTime = ${Konversi().toTime(n)}")
+        println("toTimeWithMinus = ${Konversi().toTimeWithMinus(n)}")
         println("toTimeFull = ${Konversi().toTimeFull(n)}")
         println("toTimeFullRound = ${Konversi().toTimeFullRound(n)}")
         println("toTimeFullRound2 = ${Konversi().toTimeFullRound2(n)}")

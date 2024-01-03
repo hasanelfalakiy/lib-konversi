@@ -14,7 +14,22 @@
           "line": 109
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/lib-konversi/lib/src/test/kotlin/com/andihasan7/lib/konversi/LibraryTest.kt",
+      "selection": {
+        "end": {
+          "column": 31,
+          "index": 617,
+          "line": 20
+        },
+        "start": {
+          "column": 31,
+          "index": 617,
+          "line": 20
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt"
+  "selectedFile": "/storage/emulated/0/lib-konversi/lib/src/test/kotlin/com/andihasan7/lib/konversi/LibraryTest.kt"
 }
