@@ -53,11 +53,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.andihasan97:lib-konversi:3.1.1")
+implementation("com.github.andihasan97:lib-konversi:3.1.2")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.andihasan97:lib-konversi:3.1.1'
+implementation 'com.github.andihasan97:lib-konversi:3.1.2'
 ```
 
 ## Tutorial Youtube
