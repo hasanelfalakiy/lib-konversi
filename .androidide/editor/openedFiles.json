@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt",
+      "selection": {
+        "end": {
+          "column": 15,
+          "index": 6253,
+          "line": 182
+        },
+        "start": {
+          "column": 15,
+          "index": 6253,
+          "line": 182
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/lib-konversi/README.md",
+      "selection": {
+        "end": {
+          "column": 34,
+          "index": 2861,
+          "line": 86
+        },
+        "start": {
+          "column": 34,
+          "index": 2861,
+          "line": 86
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/lib-konversi/lib/src/main/kotlin/com/andihasan7/lib/konversi/Konversi.kt"
+}

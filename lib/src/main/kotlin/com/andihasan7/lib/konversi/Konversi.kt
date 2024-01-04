@@ -31,15 +31,13 @@ class Konversi {
     /* 
     * PERHATIAN !!!
     *
-    * fungsi mengubah DMS ke Double (toDecimal), jika bernilai negatif,
+    * > fungsi mengubah DMS ke Double (toDecimal), jika bernilai negatif,
     * wajib memasukkan tanda negatif (-) disetiap input DMS.
     * parameter second bisa menerima integer / double
     *
-    * > semua fungsi toDegree mendukung nilai negatif
-    * > fungsi toTime hanya yang bernama WithMinus yang mendukung nilai negatif
+    * > semua fungsi mendukung nilai negatif
     */
-   
-   
+    
     fun toDecimal(degree: Int, minute: Int, second: Number): Double {
     	val decimal = degree + (minute.toDouble() / 60) + (second.toDouble() / 3600)
     	return decimal
@@ -57,148 +55,132 @@ class Konversi {
     
         return decimal
     }
-
-    // HH : MM detik dibulatkan ke menit, menit ke jam jika menit == 60
-    fun toTime(decimal: Double): String {
-    	var time = decimal.toInt().toString()
-    	var minute = ((decimal - time.toDouble()) * 60).toInt().toString()
-    	var second = round(((decimal - time.toDouble()) * 60 - minute.toDouble()) * 60).toInt().toString()
-
-    	// Tambahkan perhitungan untuk membulatkan detik ke menit & menit ke jam jika menit == 60
-    	if (second.toDouble() <= 60 && second.toDouble() >= 30) {
-        	minute = (minute.toInt() + 1 - 60).toString()
-            time = (time.toInt() + 1).toString()
-    	}
-        
-        // Tambahkan nol sebelum angka yang kurang dari 10
-        time = time.padStart(2, '0')
-        minute = minute.padStart(2, '0')
-
-    	return "$time:$minute"
-	}
-    
     
     /*
-    * HH : MM detik dibulatkan ke menit, menit ke jam jika menit == 60,
+    * HH:MM detik dibulatkan ke menit, menit ke jam jika menit == 60,
     * positif/negatif : sama-sama dibulatkan keatas/kebawah (menjauhi nol)
     */
-    fun toTimeWithMinus(decimal: Double): String {
-	    var tandaMinus = false
-    
-        var time = (abs(decimal)).toInt().toString()
+    fun toTime(decimal: Double): String {
+        var time = abs(decimal).toInt().toString()
         var minute = ((abs(decimal) - time.toDouble()) * 60).toInt().toString()
         var second =
-            round(((abs(decimal) - time.toDouble()) * 60 - minute.toDouble()) * 60).toInt().toString()
+            (round((((abs(decimal) - time.toDouble()) * 60) - minute.toDouble()) * 60)).toInt().toString()
 
-        // Tambahkan perhitungan untuk membulatkan detik ke menit & menit ke jam jika menit == 60
-        if (second.toDouble() <= 60 && second.toDouble() >= 30) {
-            minute = (minute.toInt() + 1 - 60).toString()
+        // Tambahkan perhitungan untuk membulatkan detik ke menit & menit ke jam jika detik >= 30 & menit == 60
+        if (second.toInt() >= 30) {
+            minute = (minute.toInt() + 1).toString()
+        }
+
+        if (minute.toInt() == 60) {
+            minute = (minute.toInt() - 60).toString()
             time = (time.toInt() + 1).toString()
         }
-    
-        if (decimal < 0) {
-            tandaMinus = true
-        }
 
         // Tambahkan nol sebelum angka yang kurang dari 10
         time = time.padStart(2, '0')
         minute = minute.padStart(2, '0')
-    
-        if (tandaMinus) {
+
+        if (decimal < 0) {
             time = "-$time"
         }
-    
+
         return "$time:$minute"
     }
-
     
-    
-    // HH : MM : SS angka dibelakang koma orde detik tidak dibulatkan ke detik integer
+    // HH:MM:SS angka dibelakang koma orde detik tidak dibulatkan ke detik integer
     fun toTimeFull(decimal: Double): String {
-    	var time = decimal.toInt().toString()
-    	var minute = ((decimal - time.toDouble()) * 60).toInt().toString()
-    	var second = (((decimal - time.toDouble()) * 60 - minute.toDouble()) * 60).toInt().toString()
-        
-        time = time.padStart(2, '0')
-        minute = minute.padStart(2, '0')
-        second = second.padStart(2, '0')
+        var time = abs(decimal).toInt().toString()
+        var minute = ((abs(decimal) - time.toDouble()) * 60).toInt().toString()
+        var second = ((((abs(decimal) - time.toDouble()) * 60) - minute.toDouble()) * 60).toInt().toString()
 
-    	return "$time:$minute:$second"
-	}
-    
-    // HH : MM : SS angka dibulatkan ke detik
-    fun toTimeFullRound(decimal: Double): String {
-    	var time = decimal.toInt().toString()
-    	var minute = ((decimal - time.toDouble()) * 60).toInt().toString()
-    	var second = round(((decimal - time.toDouble()) * 60 - minute.toDouble()) * 60).toInt().toString()
-        
         // Tambahkan perhitungan untuk membulatkan detik ke menit & menit ke jam jika detik & menit == 60
-    	if (second.toDouble() == 60.0) {
-        	second = (second.toInt() - 60).toString()
-        	minute = (minute.toInt() + 1).toString()
-    	}
+        if (second.toInt() == 60) {
+            second = (second.toInt() - 60).toString()
+            minute = (minute.toInt() + 1).toString()
+        }
 
-    	if (minute.toInt() == 60) {
-        	minute = (minute.toInt() - 60).toString()
-        	time = (time.toInt() + 1).toString()
-    	}
-        
-        time = time.padStart(2, '0')
-        minute = minute.padStart(2, '0')
-        second = second.padStart(2, '0')
-
-    	return "$time:$minute:$second"
-	}
-    
-    // HH:MM:SS,ss dibulatkan ke 2 angka di belakang koma 
-    fun toTimeFullRound2(decimal: Double): String {
-    	var time = decimal.toInt().toString()
-    	var minute = ((decimal - time.toDouble()) * 60).toInt().toString()
-    	var second = (((decimal - time.toDouble()) * 60 - minute.toDouble()) * 60).round(2).toString()
-        
-        time = time.padStart(2, '0')
-        minute = minute.padStart(2, '0')
-        second = second.padStart(2, '0')
-
-    	return "$time:$minute:$second"
-	}
-    
-    // HH:MM:SS,ss dibulatkan ke 2 angka di belakang koma, dengan tanda minus
-    fun toTimeFullRound2WithMinus(decimal: Double): String {
-        var degree = abs(decimal).toInt().toString()
-        var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
-        var second =
-            ((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
+        if (minute.toInt() == 60) {
+            minute = (minute.toInt() - 60).toString()
+            time = (time.toInt() + 1).toString()
+        }
 
         // Tambahkan nol sebelum angka yang kurang dari 10
-        degree = degree.padStart(2, '0')
+        time = time.padStart(2, '0')
         minute = minute.padStart(2, '0')
         second = second.padStart(2, '0')
 
         if (decimal < 0) {
-            degree = "-$degree"
+            time = "-$time"
         }
 
-        return "$degree:$minute:$second"
+        return "$time:$minute:$second"
+    }
+    
+    // HH:MM:SS angka dibulatkan ke detik
+    fun toTimeFullRound(decimal: Double): String {
+        var time = abs(decimal).toInt().toString()
+        var minute = ((abs(decimal) - time.toDouble()) * 60).toInt().toString()
+        var second = (round((((abs(decimal) - time.toDouble()) * 60) - minute.toDouble()) * 60)).toInt().toString()
+
+        // Tambahkan perhitungan untuk membulatkan detik ke menit & menit ke jam jika detik & menit == 60
+        if (second.toInt() == 60) {
+            second = (second.toInt() - 60).toString()
+            minute = (minute.toInt() + 1).toString()
+        }
+
+        if (minute.toInt() == 60) {
+            minute = (minute.toInt() - 60).toString()
+            time = (time.toInt() + 1).toString()
+        }
+
+        // Tambahkan nol sebelum angka yang kurang dari 10
+        time = time.padStart(2, '0')
+        minute = minute.padStart(2, '0')
+        second = second.padStart(2, '0')
+
+        if (decimal < 0) {
+            time = "-$time"
+        }
+
+        return "$time:$minute:$second"
+    }
+    
+    // HH:MM:SS,ss dibulatkan ke 2 angka di belakang koma
+    fun toTimeFullRound2(decimal: Double): String {
+        var time = abs(decimal).toInt().toString()
+        var minute = ((abs(decimal) - time.toDouble()) * 60).toInt().toString()
+        var second =
+            ((((abs(decimal) - time.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
+
+        // Tambahkan nol sebelum angka yang kurang dari 10
+        time = time.padStart(2, '0')
+        minute = minute.padStart(2, '0')
+        second = second.padStart(2, '0')
+
+        if (decimal < 0) {
+            time = "-$time"
+        }
+
+        return "$time:$minute:$second"
     }
     
     // HH j MM m SS,ss d dibulatkan ke 2 angka di belakang koma
-    fun toCounterTimeRound2WithMinus(decimal: Double): String {
-        var degree = abs(decimal).toInt().toString()
-        var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
+    fun toCounterTimeRound2(decimal: Double): String {
+        var time = abs(decimal).toInt().toString()
+        var minute = ((abs(decimal) - time.toDouble()) * 60).toInt().toString()
         var second =
-            ((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
+            ((((abs(decimal) - time.toDouble()) * 60) - minute.toDouble()) * 60).round(2).toString()
 
         // Tambahkan nol sebelum angka yang kurang dari 10
-        degree = degree.padStart(2, '0')
+        time = time.padStart(2, '0')
         minute = minute.padStart(2, '0')
         second = second.padStart(4, '0')
 
         if (decimal < 0) {
-            degree = "-$degree"
+            time = "-$time"
         }
 
-        return "$degree j $minute m $second d"
+        return "$time j $minute m $second d"
     }
     
     // DD° MM` SS``angka dibelakang koma orde detik tidak dibulatkan ke detik integer
@@ -224,7 +206,7 @@ class Konversi {
     fun toDegreeFullRound(decimal: Double): String {
     	var degree = abs(decimal).toInt().toString()
     	var minute = ((abs(decimal) - degree.toDouble()) * 60).toInt().toString()
-    	var second = round((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60).toInt().toString()
+    	var second = (round((((abs(decimal) - degree.toDouble()) * 60) - minute.toDouble()) * 60)).toInt().toString()
         
         // Tambahkan perhitungan untuk membulatkan detik ke menit & menit ke jam jika detik & menit == 60
     	if (second.toDouble() == 60.0) {
