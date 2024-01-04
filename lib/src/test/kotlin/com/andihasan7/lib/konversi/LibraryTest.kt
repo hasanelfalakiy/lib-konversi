@@ -12,13 +12,16 @@ class LibraryTest {
     @Test fun someLibraryMethodReturnsTrue() {
         val classUnderTest = Konversi().toTimeFull(10.99999722)
         assertTrue(classUnderTest == "10:59:59", "metode library harus bernilai 'true'")
-        
+    }
+    
+    @Test
+    fun testKonversi() {
         val dr = 10
         val mnt = 59
         val dtk = 10.99
-        val v = 17.97876587007
+        val v = -19.97876587007
         
-        val n = -3.996666666667
+        val n = 23.999722222222
         
         val degree = 7
         val minute = 26
@@ -28,12 +31,10 @@ class LibraryTest {
         println("toDecimalCheck = ${Konversi().toDecimalCheck(degree, minute, second, check)}")
         println("toDecimal = ${Konversi().toDecimal(dr, mnt, dtk)}")
         println("toTime = ${Konversi().toTime(n)}")
-        println("toTimeWithMinus = ${Konversi().toTimeWithMinus(n)}")
         println("toTimeFull = ${Konversi().toTimeFull(n)}")
         println("toTimeFullRound = ${Konversi().toTimeFullRound(n)}")
         println("toTimeFullRound2 = ${Konversi().toTimeFullRound2(n)}")
-        println("toTimeFullRound2WithMinus = ${Konversi().toTimeFullRound2WithMinus(n)}")
-        println("toCounterTimeRound2WithMinus = ${Konversi().toCounterTimeRound2WithMinus(n)}")
+        println("toCounterTimeRound2 = ${Konversi().toCounterTimeRound2(n)}")
         println("toDegreeFull = ${Konversi().toDegreeFull(n)}")
         println("toDegreeFullRound = ${Konversi().toDegreeFullRound(n)}")
         println("toDegreeFullRound2 = ${Konversi().toDegreeFullRound2(n)}")
