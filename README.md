@@ -53,11 +53,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.andihasan97:lib-konversi:3.1.2")
+implementation("com.github.andihasan97:lib-konversi:5.0.0")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.andihasan97:lib-konversi:3.1.2'
+implementation 'com.github.andihasan97:lib-konversi:5.0.0'
 ```
 
 ## Tutorial Youtube
@@ -73,21 +73,26 @@ Praktik implementasi library hisab irsyadul murid
 ```kotlin.kt
 
 /* 
-  fungsi mengubah DMS ke Double, jika bernilai negatif,
-  wajib memasukkan tanda negatif (-) disetiap input DMS.
-  parameter second bisa menerima integer/double
+* fungsi mengubah DMS ke Double, jika bernilai negatif,
+* wajib memasukkan tanda negatif (-) disetiap input DMS.
+* parameter second bisa menerima integer/double
 */
 fun toDecimal(degree: Int, minute: Int, second: Number): Double
 
-// tipe Number berarti menerima tipe Integer/Double
-// jika true maka positif, jika false maka negatif
+/*
+* fungsi ini mengubah DMS ke Double dengan input data nilai positif semua,
+* sedangkan untuk positif/negatif nya tambahkan parameter true untuk positif
+* false untuk negatif
+*
+* tipe Number berarti menerima tipe Integer/Double
+*/
 fun toDecimalCheck(degree: Int, minute: Int, second: Number, check: Boolean): Double
 
-// HH:MM detik dibulatkan ke menit, menit ke jam jika menit == 60
+/*
+* HH:MM detik dibulatkan ke menit, menit ke jam jika menit == 60,
+* positif/negatif : sama-sama dibulatkan keatas/kebawah (menjauhi nol)
+*/
 fun toTime(decimal: Double): String
-
-// positif/negatif : sama-sama dibulatkan keatas/menjauhi nol
-fun toTimeWithMinus(decimal: Double): String
 
 // HH:MM:SS angka dibelakang koma orde detik tidak dibulatkan ke detik integer
 fun toTimeFull(decimal: Double): String
@@ -107,11 +112,8 @@ fun toDegreeFullRound(decimal: Double): String
 // DD° MM' SS,ss" dibulatkan ke 2 angka di belakang koma
 fun toDegreeFullRound2(decimal: Double): String
 
-// HH:MM:SS,ss dibulatkan ke 2 angka di belakang koma, dengan tanda minus
-fun toTimeFullRound2WithMinus(decimal: Double): String
-
 // HH j MM m SS,ss d dibulatkan ke 2 angka di belakang koma
-fun toCounterTimeRound2WithMinus(decimal: Double): String
+fun toCounterTimeRound2(decimal: Double): String
 
 // Extension Function Round, custom round membulatkan angka di belakang koma
 fun Double.round( decimals : Int ) : Double
