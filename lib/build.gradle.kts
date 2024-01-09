@@ -16,8 +16,8 @@ plugins {
     `maven-publish`
 }
 
-group = "com.github.andihasan97.lib-konversi"
-version = "4.0.0"
+group = "com.github.hasanelfalakiy"
+version = "4.0.1"
 
 repositories {
     // Use Maven Central for resolving dependencies.
