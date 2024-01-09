@@ -6,15 +6,15 @@
 
 <p align="center">
 <!-- Latest release -->
-<img src="https://img.shields.io/github/v/release/andihasan97/lib-konversi?include_releases&label=latest%20release&style=for-the-badge&color=brightgreen" alt="latest_release"/>
+<img src="https://img.shields.io/github/v/release/hasanelfalakiy/lib-konversi?include_releases&label=latest%20release&style=for-the-badge&color=brightgreen" alt="latest_release"/>
 <!-- Jitpack release -->
-<img src="https://img.shields.io/jitpack/v/andihasan97/lib-konversi.svg?style=for-the-badge&color=brightgreen" alt="jitpack_release">
+<img src="https://img.shields.io/jitpack/v/hasanelfalakiy/lib-konversi.svg?style=for-the-badge&color=brightgreen" alt="jitpack_release">
 <!-- Github Repo size -->
-<img src="https://img.shields.io/github/repo-size/andihasan97/lib-konversi?style=for-the-badge">
+<img src="https://img.shields.io/github/repo-size/hasanelfalakiy/lib-konversi?style=for-the-badge">
 <!-- Build with Kotlin -->
 <img src="https://img.shields.io/badge/Kotlin-C116E3?&style=for-the-badge&logo=kotlin&logoColor=white" alt="build_with_kotlin">
 <!-- License -->
-<img src="https://img.shields.io/github/license/andihasan97/lib-konversi?color=blue&style=for-the-badge&color=brightgreen" alt="License">
+<img src="https://img.shields.io/github/license/hasanelfalakiy/lib-konversi?color=blue&style=for-the-badge&color=brightgreen" alt="License">
 </p>
 
 ## Tentang Library Konversi
@@ -53,11 +53,11 @@ jika menggunakan groovy dsl
 di blok ```dependencies``` 
 
 ```kotlin.kts
-implementation("com.github.andihasan97:lib-konversi:4.0.0")
+implementation("com.github.hasanelfalakiy:lib-konversi:4.0.1")
 ```
 jika menggunakan groovy dsl
 ```groovy
-implementation 'com.github.andihasan97:lib-konversi:4.0.0'
+implementation 'com.github.hasanelfalakiy:lib-konversi:4.0.1'
 ```
 
 ## Tutorial Youtube
